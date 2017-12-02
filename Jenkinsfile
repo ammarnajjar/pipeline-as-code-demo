@@ -1,14 +1,14 @@
 #!groovy
 
 node {
-	stage 'Setup' {
+	stage ('Setup') {
 		createVirtualEnv 'env'
 		executeIn 'env', 'pip install -U -r requirements.txt'
 	}
-	stage 'Run Tests' {
+	stage ('Run Tests') {
 		executeIn 'env', 'python -m pytest -v tests'
 	}
-	stage 'Notify' {
+	stage ('Notify') {
 		mail bcc: '', body: '${subject} (${env.BUILD_URL})', cc: '', from: 'jenkins@openshift.com', replyTo: '', subject: '${buildStatus}: Job \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\'', to: 'najjarammar@gmail.com'
 	}
 }
