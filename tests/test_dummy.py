@@ -17,5 +17,8 @@ class TestPass(unittest.TestCase):
     def test_three(self):
         self.assertTrue(3 == 3)
 
+    def test_four(self):
+        self.assertTrue(4 == 4)
+
     def tearDown(self):
         pass
