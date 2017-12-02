@@ -15,7 +15,7 @@ node('DemoNode') {
 
 
 def createVirtualEnv(String name) {
-	python3 -m venv ${name}"
+	python3 -m venv ${name}
 }
 
 def executeIn(String environment, String script) {
