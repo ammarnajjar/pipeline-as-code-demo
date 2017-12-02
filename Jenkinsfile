@@ -9,7 +9,7 @@ node('DemoNode') {
 		executeIn 'env', 'python -m pytest -v tests'
 	}
 	stage 'Notify' {
-		mail bcc: '', body: '${subject} (${env.BUILD_URL})', cc: '', from: 'jenkins@openshift.com', replyTo: '', subject: '${buildStatus}: Job \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\'', to: 'najjarammar@gmail.com
+		mail bcc: '', body: '${subject} (${env.BUILD_URL})', cc: '', from: 'jenkins@openshift.com', replyTo: '', subject: '${buildStatus}: Job \'${env.JOB_NAME} [${env.BUILD_NUMBER}]\'', to: 'najjarammar@gmail.com'
 	}
 }
 
