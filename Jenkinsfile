@@ -15,7 +15,7 @@ node {
 
 
 def createVirtualEnv(String name) {
-	sh 'python3 -m venv ${name}'
+	sh 'python -m venv ${name}'
 }
 
 def executeIn(String environment, String script) {
