@@ -1,6 +1,6 @@
 #!groovy
 
-node('DemoNode') {
+node {
 	stage 'Setup' {
 		createVirtualEnv 'env'
 		executeIn 'env', 'pip install -U -r requirements.txt'
