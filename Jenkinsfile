@@ -26,9 +26,10 @@ node('docker') {
                     } finally {
                         step([$class: 'JUnitResultArchiver', testResults: 'nosetests.xml'])
                     }
-                }
-	}
+		}
+	    }
     }
+}
 	    
 // node {
 //	stage ('Setup') {
